@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace ArcadeSpaceInvadersLibrary
 {
-    public class IShootable
+    interface IShootable
     {
+        int Health
+        {
+            get;
+            set;
+        }
+        int Points
+        {
+            get;
+            set;
+        }
+
+        void GotShot();
+        void Destroy();
     }
 }

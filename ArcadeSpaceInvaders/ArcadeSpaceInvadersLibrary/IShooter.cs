@@ -8,5 +8,6 @@ namespace ArcadeSpaceInvadersLibrary
 {
     interface IShooter
     {
+        void Shoot();
     }
 }

@@ -9,18 +9,21 @@ namespace ArcadeSpaceInvadersLibrary
 {
     interface IMovable
     {
-        Vector2 Position
+        Rectangle BoundingBox
         {
             get;
             set;
         }
-        int Speed
+        Vector2 Speed
         {
             get;
             set;
         }
 
-        void move();
+        void MoveUp();
+        void MoveDown();
+        void MoveLeft();
+        void MoveRight();
 
     }
 }
