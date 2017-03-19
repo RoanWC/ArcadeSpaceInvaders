@@ -13,7 +13,6 @@ namespace ArcadeSpaceInvadersLibrary
         
         private Vector2 speed;
         private int health;
-        private Projectile projectile;
         private int points;
         private Rectangle boundingBox;
         private int screeenWidth;
@@ -21,7 +20,6 @@ namespace ArcadeSpaceInvadersLibrary
 
 
         //properties
-
         public Vector2 Speed
         {
             get
@@ -34,7 +32,6 @@ namespace ArcadeSpaceInvadersLibrary
                 speed = value;
             }
         }
-
         public int Health
         {
             get
@@ -47,18 +44,6 @@ namespace ArcadeSpaceInvadersLibrary
                 health = value;
             }
         }
-        public Projectile Projectile
-        {
-            get
-            {
-                return projectile;
-            }
-            set
-            {
-                projectile = value;
-            }
-        }
-
         public int Points
         {
             get
@@ -71,7 +56,6 @@ namespace ArcadeSpaceInvadersLibrary
                 points = value;
             }
         }
-
         public Rectangle BoundingBox
         {
             get
@@ -98,6 +82,14 @@ namespace ArcadeSpaceInvadersLibrary
 
         //methods
 
+        public HeroShip(int shipWidth, int shipHeight, int screenWidth, int screenHeight, Vector2 speed)
+        {
+            Speed = speed;
+            Health = 3;
+            Points = 0;
+            BoundingBox = new Rectangle(screeenWidth / 2 + shipWidth / 2, screenHeight - shipHeight, shipWidth, shipHeight);
+            ScreenWidth = screenWidth;
+        }
 
         public void MoveLeft()
         {
